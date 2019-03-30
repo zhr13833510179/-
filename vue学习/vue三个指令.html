@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+    <style>
+    [v-clock]{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <!-- v-clock: 是 Vue中,提供的用于绑定的指令 -->
+        <!-- 使用 v-clock 能够解决 差值表达式的闪烁问题 -->
+        <p v-clock>++++++++{{ msg }}\\\\\\\\\\\\\</p>
+        <h4 v-text='msg'>123123</h4>
+        <!-- 默认的 v-text 是没有闪烁问题的 -->
+        <!-- v-text会覆盖元素中原本的内容,但是 差值表达式  只会替换自己的占位符,不会把 整个元素的内容清空  -->
+
+        
+        <div>{{msg2}}</div>
+        <div v-text='msg2'></div>
+        <div v-html='msg2'></div>
+
+        <!-- 通过v-bind连接mytitle 从而在input当中的title中的值 把mytitle的文本给到title值中 -->
+        <!-- 注意 ： v-bind: 指令可以被简写为 : 要绑定的属性 -->
+        <!-- v-bind 中, 可以写合法的js的表达式 -->
+        <!-- vue 中的  v-on 提供了事件绑定机制 -->
+        <input type="button" :title="mytitle + '真tm帅'" value="按钮" @click="show">
+    </div>
+
+
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                msg:'我爱vue',
+                msg2:'<h1>八级大狂风</h1>',
+                mytitle: '这是一个title'
+            },
+            methods:{
+                show: function(){
+                    alert('hellow wold')
+                }
+            }
+        })    
+    </script>
+</body>
+</html>
+
+
+<!-- 1. 如何定义一个基本的vue代码结构 -->
+<!-- 2. 差值表达式和v-text 的区别 -->
+<!-- 3. v-cloak  解决了闪烁的问题 -->
+<!-- 4. v-html   可以用标签来表示 -->
+<!-- 5. v-bind  缩写是   : -->
+<!-- 6. v-on   缩写是   @ -->

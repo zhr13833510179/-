@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .inner{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+        }
+        .outer{
+            padding: 30px;
+            background-color: red;
+        }
+    </style>
+    <!-- 1.连接 包 -->
+    <script src="vue-2.4.0.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="inner" @click='div'>
+            <!-- stop  关键字  是为了阻止冒泡行为  让父级不随着子级变化 -->
+            <input type="button" value="戳我" @click.stop='btn'>
+        </div>
+        <!-- prevent  通过这个关键字 来阻止默认行为-->
+        <a href="https://www.baidu.com" @click.prevent='aclick'>百度一下 你就知道</a>
+
+        <!-- 从外到内  capture  实现捕获触发事件我的机制 -->
+        <div class="inner" @click.capture.once='div'>
+            <!-- stop  关键字  是为了阻止冒泡行为  让父级不随着自己变化 -->
+            <input type="button" value="戳我" @click.stop='btn'>
+        </div>
+        <a href="https://www.baidu.com" @click='aclick'>百度一下 你就知道</a>
+
+
+        <!-- 使用 self 时  只有点击当前元素的时候 才会触发 事件的处理函数 -->
+        <div class="inner" @click.self='div'>
+                <input type="button" value="戳我" @click='btn'>
+            </div>
+
+            <!-- 演示self 和 stop的区别 -->
+
+            <!-- self 只会阻止自己身上的冒泡触发,并不会真正阻止冒泡行为 -->
+            <div class="outer">
+            <div class="inner" @click.self='div'>
+                    <input type="button" value="戳我" @click='btn'>
+                </div>
+            </div>
+    </div>
+
+    <script>
+        var vm = new Vue ({
+            el:'#app',
+            data:{},
+            methods:{
+                div(){
+                    console.log('此时弹出的是 inner div 的点击事件')
+                },
+                btn(){
+                    console.log('此时弹出的是 inner btn 按钮的点击事件')
+                },
+                aclick(){
+                    console.log('此时弹出的是 a 的href')
+                },
+                outer(){
+                    console.log('此时弹出的是 outer 的点击事件')
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

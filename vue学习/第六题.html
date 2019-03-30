@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{stndetName}}</h1>
+        <input type="button" value="点名啦" @click="btn">
+        <input type="button" value="暂时停止" @click="tz">
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                list: [
+                    "小明", "小红", "小狗"
+                ],
+                stop: null,
+                stndetName: '同学名字',
+            },
+            methods: {
+        btn() {
+            if(this.stop != null) return;
+            this.stop = setInterval(() => {
+                this.stndetName = this.list[this.getRandom()]
+            }, 500)
+        },
+        getRandom() {
+            return Math.floor(Math.random() * this.list.length)
+        },
+
+        tz(){
+            clearInterval(this.stop),
+            this.stop = null;
+        }
+            }
+        })
+    </script>
+</body>
+
+</html>

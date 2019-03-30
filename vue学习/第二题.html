@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="text">
+        <input type="button" value="请添加" @click="tj">
+
+        <ul>
+            <li v-for="value,index in msg">
+                <span>{{value}}</span>
+                <span @click="zj">删除</span>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                msg:[
+                    "苹果",
+                    "香蕉"
+                    ],
+                text:"",
+            },
+            methods:{
+                tj(){
+                    this.msg.push(this.text)
+                },
+                zj(i){
+                   this.msg.splice(i,1)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

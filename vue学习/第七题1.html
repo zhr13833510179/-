@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" placeholder="请输入姓名" v-model="name">
+            <input type="text" placeholder="请输入姓别" v-model="sex">
+            <input type="text" placeholder="请输入年龄" v-model="age">
+            <input type="text" placeholder="请输入成绩" v-model="cj">
+
+            <input type="button" value="提交" @click="tj">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>成绩</th>
+                    <th>修改</th>
+                    <th>删除</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="itme,index in list">
+                    <td>{{ itme.name }}</td>
+                    <td>{{ itme.sex }}</td>
+                    <td>{{ itme.age }}</td>
+                    <td>{{ itme.cj }}</td>
+                    <td>
+                        <input type="button" value="修改" @click="xg(index)">
+                    </td>
+                    <td>
+                        <input type="button" value="删除" @click="sc(index)">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{  
+                list:[
+                    {name: "张三", sex: "男", age: "20岁", cj: "100分",},
+                    {name: "李四", sex: "男", age: "20岁", cj: "100分",}
+                ]
+            },
+            methods:{
+                tj(){
+                    this.list.push({name: this.name, sex: this.sex, age: this.age, cj: this.cj})
+                },
+                xg(i){
+                    let chengj = prompt("请您输入要修改的成绩")
+                    this.list[i].cj = chengj
+                },
+                sc(i){
+                    if(confirm("您确定要删除吗")){
+                        this.list.splice(i,1);
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

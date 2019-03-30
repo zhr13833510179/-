@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第六题</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" placeholder="姓名" v-model="name">
+            <input type="text" placeholder="性别" v-model="sex">
+            <input type="text" placeholder="年龄" v-model="age">
+            <input type="text" placeholder="成绩" v-model="cj">
+
+            <input type="button" value="添加" @click="tj">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>成绩</th>
+                    <th>添加</th>
+                    <th>删除</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr v-for="item,index in list">
+                    <td>{{item.name}}</td>
+                    <td>{{item.sex}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.cj}}</td>
+                    <td>
+                        <input type="button" value="添加" @click="tj2(index)">
+                    </td>
+                    <td>
+                        <input type="button" name="" id="" value="删除" @click="sc(index)">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                list: [
+                    { name: "", sex: "", age: "", cj: "", }
+                ]
+            },
+            methods: {
+                tj() {
+                    this.list.push({ name: this.name, sex: this.sex, age: this.age, cj: this.cj })
+                },
+                tj2(i) {
+                    var cj3 = prompt("请输入修改成绩")
+                    this.list[i].cj = cj3
+                },
+                sc(i) {
+                    if (confirm("是否想要删除")) {
+                        this.list.splice(i, 1)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

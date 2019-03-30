@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 注意:在遍历对象身上的键值对的时候,除了 有 val key 还有, 第三个位置上还有索引值 -->
+        <p v-for="(val, key, i) in user">键是:{{key}}---值是:{{val}}---索引值是:{{i}}</p>
+    </div>
+
+    <!-- t通过对象来循环每个键值对属性 -->
+
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                user:{
+                    id:1,
+                    name:'mc呵呵',
+                    gender:'男'
+                }
+            },
+            methods:{},
+        })
+    </script>
+</body>
+</html>
