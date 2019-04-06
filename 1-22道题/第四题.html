@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul li{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border:1px solid red;
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="images/mi.jpg" alt="" id="image">
+
+    <ul>
+        <li onclick="imgone" id="btnone">1</li>
+        <li onclick="imgtwo" id="btntwo">2</li>
+        <li onclick="imgthree" id="btnthree">3</li>
+        <li onclick="imgfore" id="btnfore">4</li>
+    </ul>
+
+    <script>
+        document.getElementById('btnone')
+        document.getElementById('btntwo')
+        document.getElementById('btnthree')
+        document.getElementById('btnfore')
+
+        btnone.onclick = function(){
+            image.src = 'images/1.jpg'
+        }
+        btntwo.onclick = function(){
+            image.src = 'images/2.jpg'
+        }
+        btnthree.onclick = function(){
+            image.src = 'images/3.jpg'
+        }
+        btnfore.onclick = function(){
+            image.src = 'images/img.jpg'
+        }
+    </script>
+</body>
+</html>

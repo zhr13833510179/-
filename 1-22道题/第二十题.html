@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span>{{day}}</span>
+        <span>{{hour}}</span>
+        <span>{{minute}}</span>
+        <span>{{second}}</span>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                day:'',
+                hour:'',
+                minute:'',
+                second:'',
+            },
+            created(){
+                setInterval(()=>{
+                    let gettime = new Date('2019-6-6').getTime();
+                    let getdate = new Date().getTime();
+
+                    let result = gettime - getdate
+
+                    this.day = Math.floor(result/1000/60/60/24)
+                    this.hour = Math.floor(result/1000/60/60%24)
+                    this.minute = Math.floor(result/1000/60%60)
+                    this.second = Math.floor(result/1000%60)
+                }, 500)
+            }
+        })
+    </script>
+</body>
+</html>

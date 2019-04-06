@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" placeholder="添加姓名" v-model="name">
+            <input type="text" placeholder="添加性别" v-model="sex">
+            <input type="text" placeholder="添加年龄" v-model="age">
+            <input type="text" placeholder="添加成绩" v-model="result">
+            <input type="button" value="添加" @click="push">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>成绩</th>
+                    <th>修改</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item,index in list">
+                    <td>{{item.name}}</td>
+                    <td>{{item.sex}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.result}}</td>
+                    <td>
+                        <input type="button" value="修改" @click="alter(index)">
+                    </td>
+                    <td>
+                        <a href="" @click="del(index)">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                name:"",
+                sex:"",
+                age:'',
+                result:"",
+                list:[
+                    {name: "", sex:"",age: '', result: '',}
+                ]
+            },
+            methods:{
+                push(){
+                    this.list.push({name: this.name, sex: this.sex, age: this.age, result: this.result})
+                },
+                alter(i){
+                    var text = prompt('想要修改的内容')
+                    this.list[i].result = text
+                },
+                del(i){
+                    if(confirm('真的要删除吗？')){
+                        this.list.splice(i,1)
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span>{{msg}}</span>
+        <span>{{xiaos}}</span>
+        <span>{{fenz}}</span>
+        <span>{{miao}}</span>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                msg:"",
+                xiaos:"",
+                fenz:"",
+                miao:"",
+            },
+            created(){
+                setInterval(()=>{
+                var date = new Date();
+                this.xiaos = Math.floor(date.getHours())
+                this.fenz = Math.floor(date.getMinutes())
+                this.miao = Math.floor(date.getSeconds())
+                },1000)
+            }
+        })
+    </script>
+</body>
+</html>

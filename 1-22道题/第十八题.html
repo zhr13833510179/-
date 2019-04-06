@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+    <style>
+        .list li {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border:1px solid red;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <img :src="url" alt="">
+
+        <ul class="list">
+            <li v-for="item in list" @click="tab(item.imgurl)">{{item.id}}</li>
+        </ul>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                url: 'images/1.jpg',
+
+                list: [
+                    { id: 1, imgurl: 'images/2.jpg'},
+                    { id: 2, imgurl: 'images/3.jpg'},
+                    { id: 3, imgurl: 'images/img.jpg'},
+                    { id: 4, imgurl: 'images/mi.jpg'}
+                ]
+            },
+            methods: {
+                tab(url){
+                    this.url = url
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

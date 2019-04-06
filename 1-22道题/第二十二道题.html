@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" placeholder="请输入id" v-model="id">
+            <input type="text" placeholder="请输入姓名" v-model="name">
+            <input type="text" placeholder="请输入性别" v-model="age">
+            <input type="text" placeholder="请输入年龄" v-model="sex">
+            <input type="text" placeholder="请输入成绩" v-model="result">
+
+            <input type="button" value="提交" @click="submit">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>成绩</th>
+                    <th>修改</th>
+                    <th>时间</th>
+                    <th>删除</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item,index in list">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.sex}}</td>
+                    <td>{{item.result}}</td>
+                    <td>
+                        <input type="button" value="修改" @click="revise(index)">
+                    </td>
+                    <td>{{item.sj}}</td>
+                    <td>
+                        <a href="#" @click="del(index)">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                id: '',
+                name: '',
+                age: '',
+                sex: '',
+                result: '',
+                list: [
+                    { id: '', name: '', age: '', sex: '', result: '', sj: new Date()}
+                ]
+            },
+            methods:{
+                submit(){
+                    this.list.push({id: this.id,name: this.name,age: this.age,sex: this.sex,result: this.result})
+                },
+                revise(i){
+                    var value = prompt("请输入要修改的沉积")
+                    this.list[i].result = value
+                },
+                del(i){
+                    if(confirm("请问是否删除")){
+                        this.list.splice(i,1)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

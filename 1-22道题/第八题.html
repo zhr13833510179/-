@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+
+    <script>
+        let time = new Date();
+        let date = new Date('2019-6-6');
+        let getdate = date.getTime(); //求未来的时间戳
+        let gettime = time.getTime(); //求现在的时间戳
+
+        let result = getdate - gettime ;  //求未来到现在的时间  毫秒
+
+        var miao = Math.floor(result/1000%60)
+        var fen = Math.floor(result/1000/60%60)
+        var shi = Math.floor(result/1000/60/60%24)
+
+        console.log('距离2019-6-6还有:'+shi+'-'+fen+'-'+miao)
+        document.write(result)
+    </script>
+</body>
+</html>

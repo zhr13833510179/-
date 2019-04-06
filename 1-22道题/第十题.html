@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="lh">
+    <input type="button" value="验证" id="yz">
+
+    <script>
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        document.getElementById('yz')
+        document.getElementById('lh')
+
+        yz.onclick = function(){
+            if(reg.test(lh.value)){
+                alert('输入正确')
+            }else{
+                alert('输入失败')
+            }
+        }
+    </script>
+</body>
+</html>

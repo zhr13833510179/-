@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="点名了" @click="btn">
+        <input type="button" value="暂停" @click="stop">
+        <p>{{msg}}</p>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                msg: '随机抽取',
+                timer : null
+            },
+            methods: {
+                btn() {
+                    var timer = setInterval(()=>{
+                    var list = ['小明', '小红', '小绿']
+                    this.msg = list[Math.floor(Math.random() * list.length)]
+                    },500)
+                },
+                stop(){
+                    clearInterval(this.timer)
+                    console.log('123')
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

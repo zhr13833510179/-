@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var time = new Date();
+        var date = new Date('2019-6-6');
+        var gettime = time.getTime();
+        var getdate = date.getTime();
+        var result = getdate - gettime
+
+        var day = Math.floor(result/1000/60/60/24)
+        var shi = Math.floor(result/1000/60/60%24)
+        var fen = Math.floor(result/1000/60%60)
+        var miao = Math.floor(result/1000%60)
+
+        console.log(result)
+        document.write("距离未来还有:"+day+'天'+shi+'小时'+fen+'分钟'+miao+"秒")
+    </script>
+</body>
+</html>

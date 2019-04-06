@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="dian">随机点名</p>
+    <input type="button" id="btn" value="点名了">
+
+    <script>
+        var abtn = document.getElementById('btn')
+        var adian = document.getElementById('dian')
+
+        abtn.onclick = function(){
+            var arr = ["小明","小红","效率","小兰"]
+            var tab = Math.floor(Math.random()*arr.length)
+            adian.innerHTML = arr[tab]
+        }
+    </script>
+</body>
+</html>

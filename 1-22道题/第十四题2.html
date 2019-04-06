@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="random" value="随机">
+    <p id="txt">随机点名</p>
+    <script>
+        random.onclick = function(){
+            list = ['张海','是不是','大傻逼']
+            var sj = Math.floor(Math.random()*list.length)
+            txt.innerHTML = list[sj]
+        }
+    </script>
+</body>
+</html>
