@@ -21,18 +21,18 @@
             el: "#app",
             data: {
                 msg: '随机抽取',
+                 list : ['小明', '小红', '小绿'],
                 timer : null
             },
             methods: {
                 btn() {
                     var timer = setInterval(()=>{
-                    var list = ['小明', '小红', '小绿']
-                    this.msg = list[Math.floor(Math.random() * list.length)]
+                    this.msg = this.list[Math.floor(Math.random() * this.list.length)]
                     },500)
                 },
                 stop(){
                     clearInterval(this.timer)
-                    console.log('123')
+                    this.timer = null
                 }
             },
         })
