@@ -1,0 +1,66 @@
+body {
+	background-color: #DCDCDC;
+}
+
+#head {
+	background-color: grey;
+	padding: 5px;
+	box-shadow: 2px 2px 2px #000;
+	margin-bottom: 4px;
+}
+
+#content {
+	background-color: #A9A9A9;
+	padding-left: 25%;
+	position: relative;
+}
+
+#foot {
+	background-color: #696969;
+	box-shadow: 2px 2px 2px #000;
+}
+
+#logo {
+	float: left;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Elephant", "微软雅黑";
+	text-shadow: 1px 1px 1px #A9A9A9;
+}
+
+h2:before {
+	margin-right: 20px;
+	content: url("../images/arrow.png");
+	vertical-align: middle;
+}
+
+h2 {
+	display: inline-block;
+	font-size: 3em;
+}
+
+#btn1 {
+	position: absolute;
+	right: 35%;
+	top: 15%;
+}
+
+#btn2 {
+	position: absolute;
+	right: 35%;
+	top: 65%;
+}
+
+hr {
+	margin-right: 45%;
+	border:2px #808080 solid;;
+}
+
+.pic {
+	margin-left: 6em;
+}
+
+

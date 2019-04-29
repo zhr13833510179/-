@@ -1,0 +1,15 @@
+先通过git inti 传到库中
+
+检查状态是 git status
+
+红色实在编辑区
+
+git add .    .是所有文件
+从编辑区转到暂存区
+
+git commit -m "我的第一次提交"
+从暂存区 转到 分支区
+
+查状态没有什么东西了 就提交到了分支区
+
+然后再通过 git push origin master 提交到gitHub上

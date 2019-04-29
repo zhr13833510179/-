@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* ul li {
+            width: 20px;
+            height: 20px;
+            border: 1px solid red;
+            float: left;
+            list-style: none;
+            text-align: center;
+            left: 20px;
+        } */
+        ul li {
+            width: 30px;
+            height: 30px;
+            border:1px solid red;
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="mi.jpg" alt="" id="yuan">
+    <ul>
+        <li id="tu1">1</li>
+        <li id="tu2">2</li>
+        <li id="tu3">3</li>
+        <li id="tu4">4</li>
+    </ul>
+    <script>
+        var one1 = document.querySelector('#tu1')
+        var one2 = document.querySelector('#tu2')
+        var one3 = document.querySelector('#tu3')
+        var one4 = document.querySelector('#tu4')
+        var tu = document.querySelector('#yuan');
+        one1.onclick = function () {
+            tu.src = "img.jpg";
+        }
+        one2.onclick = function () {
+            tu.src = "1.jpg";
+        }
+        one3.onclick = function () {
+            tu.src = "2.jpg";
+        }
+        one4.onclick = function () {
+            tu.src = "3.jpg";
+        } -->
+
+        <!-- html代码 -->
+        <!-- 想要互相切换的起始图片 -->
+        <img src="mi9.jpg" alt="" id="zhu">
+
+        <!-- 按钮的意思 -->
+        <ul>
+            <li id="one">1</li>
+            <li id="two">2</li>
+            <li id="three">3</li>
+            <li id="ture">4</li>
+        </ul>
+
+        <!-- js代码 -->
+        <script>
+            // 让js代码和html的代码之间产生联系
+                // 每个按钮之间的联系
+            var tu1 = document.querySelector('#one')
+            var tu2 = document.querySelector('#two')
+            var tu3 = document.querySelector('#three')
+            var tu4 = document.querySelector('#ture')
+            //和想要切换的图片之间的联系
+            var img = document.querySelector('#zhu')
+
+
+
+                // 把上面和按钮之间的联系简写 也就是 点击tu1这个按钮  通过构建函数 来改变图片路径
+                tu1.onclick = function(){
+                    img.src = "1.jpg";
+                }
+                tu2.onclick = function(){
+                    img.src = "2.jpg";
+                }
+                tu3.onclick = function(){
+                    img.src = "3.jpg";
+                }
+                tu4.onclick = function(){
+                    img.src = "img.jpg";
+                }
+        </script>
+    <!-- </script> -->
+</body>
+
+</html>
