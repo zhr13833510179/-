@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/sign.css">
+    <script src="../public/js/fontsizeset.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="Sign">
+        <img src="../public/images/状态栏.jpg" class="jpg">
+        <img src="../public/images/ico.png" class="ico">
+        <div class="user-registration">
+          <div class="user">
+            <span>
+              <strong>{{user}}</strong>
+            </span>
+            <input type="text" placeholder="请输入用户名" class="user-name">
+          </div>
+          <div class="password-box">
+            <span>
+              <strong>{{password_box}}</strong>
+            </span>
+            <input type="password" placeholder="请输入密码" class="password">
+          </div>
+        </div>
+          <a href="/addSafefive" class="sign-in" > <span>{{sign_in}} </span> </a>
+          <a href="/appRegister" class="register">{{register}}</a>
+        <a href="/appRegister1" class="forget">{{forget}}</a>
+      </div>
+      </div>
+</body>
+</html>
+

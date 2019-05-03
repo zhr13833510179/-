@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/AppHead1.css">
+    <script src="/public/js/fontsizeset.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div id="zheng">
+            <img id="statusBar" src="/public/images/状态栏2.png" alt="">
+            <img id="ReturnIcon" src="/public/images/Return@2x.png" alt="" @click="goTo">
+            <p id="Titie">{{ title }}</p>
+        </div>
+    </div>
+    <div class="quan">
+        <ul>
+            {% for item in list %}
+            <li class="nerong">
+                <div class="leftContent">
+                    <div class="icon1">
+                        <img class="icon1pck" src="/public/images/lock@2x.png" alt="">
+                    </div>
+                    <p class="subtitle">{{ item.subtitler }}</p>
+                    <p class="subtitleTow">{{ item.subtitleTow }}</p>
+                </div>
+                <div class="rightContent">
+                    <p class="name">{{ item.name }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
+{% endblock %}

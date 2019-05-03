@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/router.css">
+    <script src="/public/js/jquery.js"></script>
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+    <div id="app">
+        <ul class="router">
+                <li><a id="String" href="/appStringbox">
+                    <img id="StringPic" src="/public/images/fase2@2x.png" alt="">
+                    <p class="box">保险箱</p>
+                </a></li>
+                <li><a href="/appHead1">
+                    <img src="/public/images/Opendoor1@2x.png" alt="">
+                    <p>开门记录</p>
+                </a></li>
+                <li><a href="/appbao">
+                    <img src="/public/images/Callthepolice1@2x.png" alt="">
+                    <p>报警记录</p>
+                </a></li>
+                <li><a href="/appassociatedusershead">
+                    <img src="/public/images/Relation1@2x.png" alt="">
+                    <p>关联用户</p>
+                </a></li>
+            </ul>
+</div>
+    <div class="clear"></div>
+    {% block content %}
+    {% endblock %}
+    {% block js %}
+    <script src="/public/js/layout.js"></script>
+    {% endblock %}
+</body>
+</html>

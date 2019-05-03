@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/AppBao.css">
+    <script src="/public/js/fontsizeset.js"></script>
+</head>
+
+<body>
+    <div id="zheng">
+        <img id="statusBar" src="/public/images/状态栏2.png" alt="">
+        <img id="ReturnIcon" src="/public/images/Return@2x.png" alt="" @click="goTo">
+        <p id="Titie">{{ title }}</p>
+    </div>
+    <div id="quan">
+        <ul>
+            <li id="nerong" class="wLi">
+                <div id="leftContent">
+                    <div id="icon">
+                        <img id="iconpck" src="/public/images/move@2x.png" alt>
+                    </div>
+                    <p id="subtitle">{{ subtitler }}</p>
+                    <p id="subtitleTow">{{ subtitleTow }}</p>
+                </div>
+                <div id="rightContent">
+                    <p id="name">{{ name }}</p>
+                </div>
+            </li>
+            <li id="nerong" class="wLi">
+                <div id="leftContent">
+                    <div id="icon2">
+                        <img id="iconpck2" src="/public/images/Electricquantity@2x.png" alt>
+                    </div>
+                    <p id="subtitle">{{ subtitler2 }}</p>
+                    <p id="subtitleTow">{{ subtitleTow2 }}</p>
+                </div>
+                <div id="rightContent">
+                    <p id="name">{{ name }}</p>
+                </div>
+            </li>
+            <li id="nerong" class="wLi">
+                <div id="leftContent">
+                    <div id="icon">
+                        <img id="iconpck3" src="/public/images/modify@2x.png" alt>
+                    </div>
+                    <p id="subtitle">{{ subtitler3}}</p>
+                    <p id="subtitleTow">{{ subtitleTow2 }}</p>
+                </div>
+                <div id="rightContent">
+                    <p id="name">{{ name }}</p>
+                </div>
+            </li>
+            <li id="nerong" class="wLi">
+                <div id="leftContent">
+                    <div id="icon2">
+                        <img id="iconpck2" src="/public/images/Electricquantity@2x.png" alt>
+                    </div>
+                    <p id="subtitle">{{ subtitler4 }}</p>
+                    <p id="subtitleTow">{{ subtitleTow3 }}</p>
+                </div>
+                <div id="rightContent">
+                    <p id="name">{{ name }}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+{% endblock %}

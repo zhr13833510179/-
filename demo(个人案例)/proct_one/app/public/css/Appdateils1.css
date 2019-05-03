@@ -1,0 +1,134 @@
+#app{
+    position: absolute;
+    z-index: 9999;
+    width: 7.5rem;
+    height: 13.33rem;
+    overflow: hidden;
+}
+li {
+    list-style-type: none;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.header {
+    width: 7.8rem;
+    height: 1.25rem;
+    background-color: #17181a;
+    position: relative;
+    top:-0.15rem;
+    left:-0.15rem   ;
+}
+.header .header_top {
+    width: 7.75rem;
+    height: 0.4rem;
+    background-color: #000;
+    position: absolute; 
+    top:0.2rem;
+    left:0;
+}
+.header .header_botton {
+    height: 0.85rem;
+    width: 7.8rem;
+    position: absolute;
+    left:0;
+    top:0.5rem;
+}
+.header .icon {
+    width: 7.3rem;
+    position: absolute;
+    /* top:0.1rem; */
+    left:0.3rem;
+}
+.header_botton img {
+    width: 0.2rem;
+    position: absolute;
+    top:0.2rem;
+    left:0.3rem;
+}
+.header_botton span {
+    font-size: 0.3rem;
+    position: absolute;
+    color: #fff;
+    left:3.2rem;
+    top:0.2rem;
+}
+.content {
+    width: 7.8rem;
+    height: 12.45rem;
+    background-color: #f2f2f2;
+    position: relative;
+    left:-0.15rem;
+    top:-0.15rem;
+}
+.content .content-top {
+    width: 7.75rem;
+    height: 2.2rem;
+    background-color: #fff;
+}
+.content .content-top li {
+    width: 7.65rem;
+    height: 1.1rem;
+}
+.content li span{
+    font-size: 0.3rem;
+    position: absolute;
+}
+.content li img {
+    width: 0.2rem;
+    position: absolute;
+    top:0.35rem;
+    left:7.05rem;
+}
+.content .li_bottom {
+    border-top:1px solid #e6e6e6;
+    position: relative;
+}
+.content .text {
+    position: absolute;
+    top:0.35rem;
+    left:0.3rem;
+}
+.content .txt {
+    position: absolute;
+    top:0.35rem;
+    left:5.25rem;
+}
+.content .li_bottom .text {
+    position: absolute;
+    top:0.35rem;
+    left:0.3rem;
+}
+.content .li_bottom .txt {
+    left:6.65rem
+}
+.content .content-bottom {
+    width: 7.65rem;
+    height: 4.45rem;
+    background-color: #fff;
+    margin-top: 0.3rem;
+}
+.content .content-bottom li{
+    height: 1.1rem;
+    width: 7.8rem;
+    background-color: #fff;
+    border-top:1px solid #e6e6e6;
+    font-size: 0.3rem;
+}
+.content .content-bottom .left {
+    padding-top:0.35rem;
+    float: left;
+    margin-left: 0.3rem;
+}
+.content .content-bottom .right {
+    /* float:right; */
+    padding-top:0.35rem;
+    margin-right: 0.3rem;
+    position: absolute;
+    right:0;
+}

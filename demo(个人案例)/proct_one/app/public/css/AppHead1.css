@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#zheng{
+    width: 7.5rem;
+    height: 1.28rem;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: black;
+}
+#statusBar{
+    width: 7.26rem;
+    /* height: 0.23rem; */
+    float: left;
+    margin-left: 0.12rem;
+    margin-top: 0.07rem;
+}
+#ReturnIcon{
+    float: left;
+    width: 0.20rem;
+    /* height: 0.35rem; */
+    margin-left: 0.25rem;
+    margin-top: 0.34rem;
+}
+#Titie{
+    font-size: 0.29rem;
+    color: rgb(255, 255, 255);
+    letter-spacing:0.04rem;
+    margin-left: 3.12rem;
+    margin-top: 0.68rem;
+}#quan {
+  width: 7.5rem;
+  height: 9.9rem;
+  /* border: 1px solid red;  */
+}
+#nerong {
+  width: 6.9rem;
+  height: 1.15rem;
+  border-bottom: 1px solid #e6e6e6;
+  margin: auto;
+  margin-top: 0.25rem;
+}
+#icon1 {
+  background-color: #f7a41e;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 5px;
+  /* margin-top: 0.25rem; */
+  float: left;
+}
+#icon1pck {
+  width: 0.62rem;
+  height: 0.62rem;
+  float: left;
+  margin: 15%;
+}
+#subtitle {
+  font-size: 0.3rem;
+  float: left;
+  margin-top: 0.08rem;
+  margin-left: 0.19rem;
+}
+#subtitleTow{
+    font-size: 0.25rem;
+    color: #a1a1a1;
+    float: left;
+    margin-top:0.58rem;
+    margin-left: -0.59rem;
+}
+#leftContent{
+    width: 2.06rem;
+    height: 1.06rem;
+    float: left;
+}
+#rightContent{
+    float: right;
+}
+#name{
+    font-size: 0.29rem;
+    color: #999999;
+    margin-top: 0.36rem;
+}
+
+#quan {
+  width: 7.5rem;
+  height: 9.9rem;
+  /* border: 1px solid red;  */
+}
+#nerong {
+  width: 6.9rem;
+  height: 1.15rem;
+  border-bottom: 1px solid #e6e6e6;
+  margin: auto;
+  margin-top: 0.25rem;
+}
+#icon1 {
+  background-color: #f7a41e;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 5px;
+  /* margin-top: 0.25rem; */
+  float: left;
+}
+#icon1pck {
+  width: 0.62rem;
+  height: 0.62rem;
+  float: left;
+  margin: 15%;
+}
+#subtitle {
+  font-size: 0.3rem;
+  float: left;
+  margin-top: 0.08rem;
+  margin-left: 0.19rem;
+}
+#subtitleTow{
+    font-size: 0.25rem;
+    color: #a1a1a1;
+    float: left;
+    margin-top:0.58rem;
+    margin-left: -0.59rem;
+}
+#leftContent{
+    width: 2.06rem;
+    height: 1.06rem;
+    float: left;
+}
+#rightContent{
+    float: right;
+}
+#name{
+    font-size: 0.29rem;
+    color: #999999;
+    margin-top: 0.36rem;
+}
+
+
+
+
+.quan {
+    width: 7.5rem;
+    height: 9.9rem;
+    /* border: 1px solid red;  */
+  }
+  .nerong {
+    width: 6.9rem;
+    height: 1.15rem;
+    border-bottom: 1px solid #e6e6e6;
+    margin: auto;
+    margin-top: 0.25rem;
+  }
+  .icon1 {
+    background-color: #f7a41e;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 5px;
+    /* margin-top: 0.25rem; */
+    float: left;
+  }
+  .icon1pck {
+    width: 0.62rem;
+    height: 0.62rem;
+    float: left;
+    margin: 15%;
+  }
+  .subtitle {
+    font-size: 0.3rem;
+    float: left;
+    margin-top: 0.08rem;
+    margin-left: 0.19rem;
+  }
+  .subtitleTow{
+      font-size: 0.25rem;
+      color: #a1a1a1;
+      float: left;
+      margin-top:0.58rem;
+      margin-left: -0.59rem;
+  }
+  .leftContent{
+      width: 2.06rem;
+      height: 1.06rem;
+      float: left;
+  }
+  .rightContent{
+      float: right;
+  }
+  .name{
+      font-size: 0.29rem;
+      color: #999999;
+      margin-top: 0.36rem;
+  }

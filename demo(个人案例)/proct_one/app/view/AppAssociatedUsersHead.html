@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/public/css/AppAssociatedUsersHead.css">
+  <script src="/public/js/fontsizeset.js"></script>
+  <script src="/public/js/jquery.js"></script>
+</head>
+
+<body>
+  <div id="zheng">
+    <img id="statusBar" src="/public/images/状态栏2.png" alt="">
+    <img id="ReturnIcon" src="/public/images/Return@2x.png" alt="" @click="goTo">
+    <p id="Titie">{{ TitieTexe }}</p>
+  </div>
+  </div>
+  <div id="quan">
+    <div  id="prompt">
+      <span id="PromptText">{{ PromptText }}</span>
+      <img @click="Prompter" id="PromptPic" src="{{PromptPic}}" alt="">
+    </div>
+    <ul>
+      {% for item in list %}
+      <li id="nerong">
+        <div id="leftContent">
+          <div id="icon">
+            <img id="iconpck" src="{{item.img}}">
+          </div>
+          <p id="subtitle">{{ item.subtitler }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% block js %}
+  <script src="/public/js/AppAssociatedUsersHead.js"></script>
+  {% endblock %}
+</body>
+
+</html>
+{% endblock %}

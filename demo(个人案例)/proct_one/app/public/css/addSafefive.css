@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  #header {
+    width: 7.5rem;
+    height: 1.28rem;
+    float: left;
+  }
+  .status-bar {
+    float: left;
+    width: 7.5rem;
+    height: 0.4rem;
+    background-color: #000000;
+  }
+  .status-bar img {
+    float: left;
+    width: 7.5rem;
+  }
+  .add {
+    float: left;
+    width: 7.5rem;
+    height: 0.88rem;
+    background-color: #17181a;
+  }
+  .return {
+    float: left;
+    width: 0.15rem;
+    height: 0.3rem;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+  }
+  .addsafe {
+    float: left;
+    font-size: 0.31rem;
+    color: #ffffff;
+    margin-top: 0.28rem;
+    margin-left: 2.46rem;
+  }
+  .ico {
+    float: left;
+    width: 2.41rem;
+    height: 2.41rem;
+    margin-top: 1.79rem;
+    margin-left: 2.55rem;
+  }
+  .add-box {
+    float: left;
+    font-size: 0.45rem;
+    margin-left: 2.62rem;
+    margin-top: 0.39rem;
+  }
+  .automatic {
+    float: left;
+    font-size: 0.29rem;
+    color: #999999;
+    margin-top: 0.29rem;
+    margin-left: 0.98rem;
+  }
+  .QR-code {
+    float: left;
+    font-size: 0.35rem;
+    color: #0091fc;
+    margin-top: 4.56rem;
+    margin-left: 2.46rem;
+  }

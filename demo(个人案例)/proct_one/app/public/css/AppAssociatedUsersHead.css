@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#zheng{
+    width: 7.5rem;
+    height: 1.28rem;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: black;
+}
+#statusBar{
+    width: 7.26rem;
+    /* height: 0.23rem; */
+    float: left;
+    margin-left: 0.12rem;
+    margin-top: 0.07rem;
+}
+#ReturnIcon{
+    float: left;
+    width: 0.20rem;
+    /* height: 0.35rem; */
+    margin-left: 0.25rem;
+    margin-top: 0.34rem;
+}
+#Titie{
+    font-size: 0.29rem;
+    color: rgb(255, 255, 255);
+    letter-spacing:0.04rem;
+    margin-left: 3.12rem;
+    margin-top: 0.68rem;
+}
+
+
+
+
+#quan {
+    width: 7.5rem;
+    height: 10.8rem;
+    /* border: 1px solid red;  */
+  }
+  #nerong {
+    width: 6.9rem;
+    height: 1.15rem;
+    border-bottom: 1px solid #e6e6e6;
+    margin: auto;
+    margin-top: 0.25rem;
+    list-style: none
+  }
+  #icon {
+    background-color:#b38eff;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 5px;
+    /* margin-top: 0.25rem; */
+    float: left;
+    position: relative;
+  }
+  #icon2{
+    background-color: #f7ba11;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 5px;
+    /* margin-top: 0.25rem; */
+    float: left;
+    position: relative;
+  }
+  #iconpck {
+    width: 0.66rem;
+    height: 0.55rem;
+    /* float: left; */
+    margin-left: 0.13rem;
+    margin-top: 0.17rem;
+    position: absolute;
+  }
+  
+  #subtitle {
+    font-size: 0.23rem;
+    float: left;
+    margin-top: 0.33rem;
+    margin-left: 0.12rem;
+  }
+  #prompt{
+    width: 7.50rem;
+    height: 0.82rem;
+    background-color: #f7eabd;
+    border: 1px solid #f7eabd;
+  }
+  #PromptText{
+    font-size: 0.31rem;
+    color: black;
+    float: left;
+    margin-top: 0.23rem;
+    margin-left: 0.31rem;
+  }
+  #PromptPic{
+    width: 0.46rem;
+    float: left;
+    margin-left: 1.34rem;
+    margin-top: 0.18rem;
+  }

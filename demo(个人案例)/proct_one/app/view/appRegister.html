@@ -1,0 +1,40 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/appRegister.css">
+    <script src="../public/js/fontsizeset.js"></script>
+</head>
+<body>
+    <div class="Header">
+        <a href="/sign"><img src="../public/images/Return.png" alt class="jiao" @click="Previous_page"></a>
+        <p class="zhu">{{registe}}</p>
+        <div class="body">
+          <hr class="hr1" color="#e6e6e6" size="0.01px">
+          <p class="z1">{{MB}}</p>
+          <input type="text" placeholder="请输入手机号" class="k1" style="outline:none;">
+          <hr class="hr2" color="#e6e6e6" size="0.01px">
+          <p class="z2">{{PIN}}</p>
+          <input type="text" placeholder="请输入验证码" class="k2" style="outline:none;">
+          <hr class="hr3" color="#e6e6e6" size="0.01px">
+          <p class="z3">{{PW}}</p>
+          <input type="text" placeholder="请输入密码" class="k3" style="outline:none;">
+          <hr class="hr4" color="#e6e6e6" size="0.01px">
+          <a  class="a1">{{HPIN}}</a>
+          <a  href="/sign" class="a2">
+            <button class="z4">{{LD}}</button>
+          </a>
+        </div>
+        <div class="footer">
+          <p class="f1">
+            {{agree}}
+            <a class="a3">{{conesal}}</a>
+          </p>
+        </div>
+      </div>
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/AppDateils.css">
+    <script src="../public/js/fontsizeset.js"></script>
+</head>
+<body>
+    <div id="header-Dateils">
+        <div class="header-inner">
+          <img src="{{imgurlone}}" alt class="status-img">
+        </div>
+        <a href="/fourteen"><img src="{{imgurltwo}}" alt class="icon-Dateils"> </a>  
+        <h6>{{strongbox}}</h6>
+       <a href="/addSafe"> <img src="{{imgurlthree}}" alt class="icon-add"> </a>
+      </div>
+      <div id="conent-Dateils">
+        <div id="footer-Dateils">
+          <img src="/public/images/guanggao@3x.png" alt class="inner-add">
+          <p>
+            {{np}}
+            <span class="text">{{Intelligence}}</span>
+            {{strongbox}}
+          </p>
+          <h6 class="txt">
+            {{msg}}
+            <span class="inner-text">{{Love}}</span>
+          </h6>
+          <ul>
+            <a href="#">
+              <li class="round"></li>
+            </a>
+            <a href="#">
+              <li class="radius"></li>
+            </a>
+            <a href="#">
+              <li></li>
+            </a>
+          </ul>
+        </div>
+        <img src="{{imgurl}}" alt class="safe">
+        <h6>
+          <span>{{msgone}}</span>
+          {{strongbox}}
+        </h6>
+        <p class="text_t1">{{text}}</p>
+        <a href="/appStringbox" class="Dateils-text">
+          <router-link :to="{name:'Appstringboxcomplete'}">
+            <div class="textBox">{{txt}}</div>
+          </router-link>
+        </a>
+      </div>
+</body>
+</html>

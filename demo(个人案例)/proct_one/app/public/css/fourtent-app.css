@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  #app {
+    width: 7.5rem;
+    height: 13.33rem;
+    background: url("/public/images/PeachBlossomFairy.png");
+    background-repeat: no-repeat;
+    background-size: 8.5rem 100%;
+    background-position: -1rem 0rem;
+    overflow: hidden;
+  }
+
+
+  .content_one {
+    width: 7.8rem;
+    height: 1rem;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    float: left;
+  }
+  .content_one_img{
+      float: left;
+      position: relative;
+      bottom: 1rem;
+      margin-left: 7.07rem;
+      margin-top: 0.44rem;
+  }
+  .content_one_input{
+      width: 7.8rem;
+      height: 1rem;
+      font-size: 0.28rem;
+      opacity: 0.3;
+      color: black;
+      font-weight: bolder;
+      float: left;
+  }
+  .content_two {
+    width: 7.8rem;
+    height: 1rem;
+    float: left;
+  }
+  .content_two_img{
+      float: left;
+      position: relative;
+      bottom: 1rem;
+      margin-left: 7.07rem;
+      margin-top: 0.44rem;
+  }
+  .content_two_input{
+      width: 7.8rem;
+      height: 1rem;
+      font-size: 0.28rem;
+      opacity: 0.3;
+      color: black;
+      font-weight: bolder;
+      float: left;
+  }
+  .content_three {
+    width: 7.8rem;
+    height: 1rem;
+    border-bottom: 1px solid #e6e6e6;
+    float: left;
+    margin-top: 0.3rem;
+  }
+  .content_three_img{
+      float: left;
+      position: relative;
+      bottom: 1rem;
+      margin-left: 7.07rem;
+      margin-top: 0.44rem;
+  }
+  .content_three_input{
+      width: 7.8rem;
+      height: 1rem;
+      font-size: 0.28rem;
+      opacity: 0.3;
+      color: black;
+      font-weight: bolder;
+      float: left;
+  }
+  .content_four {
+    width: 7.8rem;
+    height: 1rem;
+    border-bottom: 1px solid #e6e6e6;
+    float: left;
+  }
+  .content_four_img{
+      float: left;
+      position: relative;
+      bottom: 1rem;
+      margin-left: 7.07rem;
+      margin-top: 0.44rem;
+  }
+  .content_four_input{
+      width: 7.8rem;
+      height: 1rem;
+      font-size: 0.28rem;
+      opacity: 0.3;
+      color: black;
+      font-weight: bolder;
+      float: left;
+  }
+  .content_five{
+      float: left;
+      width: 7.8rem;
+      height: 1.1rem;
+      background-color: white;
+      opacity: 0.3;
+      margin-top: 0.24rem;
+      line-height: 1.1rem;
+  }
+  .content_five_span{
+      float: left;
+      font-size: 0.28rem;
+      color: red;
+      font-weight: bolder;
+      margin-left: 3.3rem
+  }
+
+
+
+
+
+
+  .head_one{
+    width: 7.5rem;
+    height: 0.4rem;
+  }
+  .head_one_img{
+    float: left;
+    width: 7.5rem;
+    margin-top: 0.05rem
+  } 
+  .head_two{
+    width: 7.5rem;
+    height: 0.84rem;
+  }
+  .head_two_img{
+    float: left;
+    margin-left: 0.3rem;
+    margin-top: 0.23rem;
+  }
+  .head_two_span{
+    font-size: 0.3rem;
+    color: white;
+    float: left;
+    margin-left: 2.9rem;
+    margin-top: 0.23rem;
+  }
+  .head_three{
+    width: 7.5rem;
+    height: 4rem;
+  }
+  .head_three_img{
+    /* float: left; */
+    margin-left: 2.1rem;
+    margin-top: 1.1rem;
+    width: 2rem;
+  }
+  .head_three_p{
+    font-size: 0.24rem;
+    color: white;
+    margin-left: 3.13rem;
+    margin-top: 0.1rem;
+  }

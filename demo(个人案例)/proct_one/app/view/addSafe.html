@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/addSafe.css">
+    <script src="../public/js/fontsizeset.js"></script>
+</head>
+<body>
+    <div class="header">
+        <!-- <img :src="status" alt="" class="status"> -->
+       <a href="/addSafefive"><img src="{{jiao33}}" alt class="jiao33" @click="return_goTo"></a>
+        <!-- <a href class="jiao33" @click="return_goTo">‹</a> -->
+        <p class="t12">{{coffer0}}</p>
+        <div class="body">
+          <p class="t22">{{coffer}}</p>
+          <ul class="t33">
+            <li>{{coffer1}}</li>
+            <li>{{coffer2}}</li>
+            <li>{{coffer3}}</li>
+          </ul>
+          <input type="text" class="so" placeholder="请输入保险箱名称" style="outline:none;">
+          <a href="/appDateils" class="r11">
+            <router-link :to="{name:'AppDateils'}"></router-link>
+              <button class="btn11">{{coffer4}}</button>
+            </router-link>
+          </a>
+        </div>
+      </div>
+</body>
+</html>

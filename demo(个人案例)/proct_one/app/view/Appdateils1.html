@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/Appdateils1.css">
+    <script src="/public/js/fontsizeset.js"></script>
+</head>
+
+<body>
+        <div id="app">
+                <div class="header">
+                    <div class="header_top">
+                        <img src='/public/images/状态栏@3x.png' class="icon">
+                    </div>
+                    <div class="header_botton">
+                       <a href="/appStringbox"><img src='/public/images/Return@2x.png' alt=""></a> 
+                        <span>{{ msg }}</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <ul class="content-top">
+                        <li>
+                            <span class="text"> {{text}} </span>
+                            <span class="txt"> {{txt}} </span>
+                            <img src='/public/images/3340e4519d6a2e35384d403aae06a27.png' alt="">
+                        </li>
+                        <li class="li_bottom">
+                            <span class="text"> {{textTwo}} </span>
+                            <span class="txt"> {{txtTwo}} </span>
+                        </li>
+                    </ul>
+                    <ul class="content-bottom">
+                        <li class="content_li">
+                            <span class="left">{{textThree}}</span>
+                            <span class="right"> {{txtThree}} </span>
+                        </li>
+                        <li>
+                            <span class="left">{{textFore}}</span>
+                            <span class="right"> {{txtFore}} </span>
+                        </li>
+                        <li>
+                            <span class="left">{{textFive}}</span>
+                            <span class="right"> {{txtFive}} </span>
+                        </li>
+                        <li>
+                            <span class="left">{{textSix}}</span>
+                            <span class="right"> {{txtSix}} </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</body>
+
+</html>
+{% endblock %}

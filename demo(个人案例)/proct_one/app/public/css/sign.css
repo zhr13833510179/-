@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  #hedaer {
+      position: relative;
+      z-index:99;
+    width: 7.5rem;
+    height: 0.4rem;
+    float: left;
+  }
+  /* #header img {
+    float: left;
+    width: 7.5rem;
+  } */
+  .jpg {
+    float: left;
+    width: 7.5rem;
+  }
+  .ico {
+    float: left;
+    height: 1.85rem;
+    margin-left: 2.86rem;
+    margin-top: 1.05rem;
+  }
+  .user-registration {
+    float: left;
+    width: 7.5rem;
+    height: 1.82rem;
+    border-top: 0.01rem solid #e5e5e5;
+    border-bottom: 0.01rem solid #e5e5e5;
+    margin-top: 1.06rem;
+  }
+  .user {
+    float: left;
+    width: 7.5rem;
+    height: 0.9rem;
+    border-bottom: 0.01rem solid #e5e5e5;
+  }
+  .user span {
+    float: left;
+    font-size: 0.26rem;
+    margin-left: 0.46rem;
+    margin-top: 0.25rem;
+  }
+  .user-name {
+    float: left;
+    width: 5.98rem;
+    height: 0.86rem;
+    border: 0;
+    margin-left: 0.2rem;
+  }
+  .password-box {
+    float: left;
+    width: 7.5rem;
+    height: 0.9rem;
+  }
+  .password-box span {
+    float: left;
+    font-size: 0.26rem;
+    margin-left: 0.46rem;
+    margin-top: 0.25rem;
+  }
+  .password {
+    float: left;
+    width: 5.98rem;
+    height: 0.86rem;
+    border: 0;
+    margin-left: 0.45rem;
+  }
+  .sign-in {
+    float: left;
+    width: 6.85rem;
+    height: 0.99rem;
+    background-color: #0090ff;
+    border: 0;
+    color: #ffffff;
+    margin-top: 0.61rem;
+    margin-left: 0.3rem;
+  }
+  span{
+    font-size: 0.3rem;
+    margin-left: 3rem;
+    margin-top: 0.3rem;
+    float: left;
+  }
+  .register {
+    float: left;
+    font-size: 0.3rem;
+    color: #808080;
+    margin-top: 0.52rem;
+    margin-left: 0.3rem;
+  }
+  .forget {
+    float: right;
+    font-size: 0.3rem;
+    color: #808080;
+    margin-top: 0.52rem;
+    margin-right: 0.3rem;
+  }

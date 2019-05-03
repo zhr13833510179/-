@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/AppStringbox.css">
+    <script src="/public/js/fontsizeset.js"></script>
+</head>
+<body>
+        <div id="header">
+                <img src="{{imgurl}}" alt="" class="inner-status">
+                <img src="{{imgurltwo}}" alt="" class="icon-String" @click="goTo">
+                <h6>{{ msg }}</h6>
+                <a href="/appdateils1" class="box_String">{{ text }}</a>
+            </div>
+            <div id="content">
+                <img src="{{imgurlthree}}" alt="" class="icon">
+                <div class="text">{{ msgtwo }}</div>
+                <div class="txt">{{ textthree }}</div>
+            </div>
+    
+            <div id="footer">
+                <div class="footer-top">
+                    <p>{{msgthree}}</p>
+                <a href="#">{{textthree}}</a>
+                <ul>
+                    <li>
+                       <a href="#"> 一级</a>
+                    </li>
+                    <li>
+                       <a href="#">二级</a> 
+                    </li>
+                    <li>   
+                       <a href="#">三级</a> 
+                    </li>
+                    <li>
+                       <a href="#">四级</a> 
+                    </li>
+                </ul>
+                </div>
+            </div>
+</body>
+</html>
+{% endblock %}
