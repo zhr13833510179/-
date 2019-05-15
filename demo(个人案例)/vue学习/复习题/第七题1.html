@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <form action="">
+            ID:
+            <input type="text" placeholder="请输入ID" v-model="id">
+
+            Name:
+            <input type="text" placeholder="请输入名称" v-model="name">
+
+            搜索关键字名称:
+            <input type="text" placeholder="请输入名称" v-model="ss">
+
+            <!-- 在vue中 使用数据绑定机制,为元素指定处理函数的时候,如果加了小括号,就可以给函数进行传参了 -->
+            <input type="button" value="添加" @click="jia">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>品牌名称</th>
+                    <th>添加时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- 之前, v-for 中的数据,都是直接从 data 上的list 中直接渲染过来的-->
+                <!-- 现在 我们, 自定义了一个 search 方法,同时, 把所有关键字,通过传参的形式给到了search方法 -->
+                <!-- 在 search 方法内部,通过执行 for 循环, 把所有符合 搜索关键字的数据，保存到 一个新数组中,
+                并返回 -->
+                <tr v-for="itme,index in search(ss)">
+                    <td>{{itme.id}}</td>
+                    <td>{{itme.name}}</td>
+                    <td>{{itme.sj}}</td>
+                    <td>{{itme.sc}}</td>
+                    <td>
+                        <input type="button" value="删除" @click="tab(index)">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                id:'',
+                name:"",
+                ss:"",  //要搜索的关键字
+                list: [
+                    { id: "1", name: "宝马", sj: new Date(),},
+                    { id: "2", name: "奔弛", sj: new Date(),}
+                ]
+            },
+            methods:{
+                jia(){
+                    this.list.push({id: this.id,name: this.name, sj: new Date(),})
+                },
+                tab(index){
+                    //通过遍历数组中索引值的方法找到对应的元素
+                    if(confirm("是否删除这条数据")){
+                        this.list.splice(index,1)
+                    }
+                },
+                search(ss){  //根据相关的关键字进行数据的搜索
+                        // var newList = [];
+                        // this.list.forEach(itme=> {
+                        //     if(itme.name.indexOf(ss) !=-1){
+                        //         newList.push(item)
+                        //     }
+                        // });
+                        // return newList
+
+                            // 注意: forEach   some  filter   findIndex  这些都属于数组的新方法
+                            // 都会对数组中的每一项,进行遍历,执行相关操作
+                       return this.list.filter(itme=>{
+                           //Es6中,为字符串提供了一个方法,叫做 String.prototype.includes
+                           //('要包含的字符串')
+                           //  如果包含则返回true  不包含则返回false
+                            if(itme.name.includes(ss)){  //判断这个数组中已经显示的名字有包含用户输入
+                                                         //的关键字则结果是true         `
+                                return itme   //所有符合 这个条件的数组 都在遍历数组中进行返回了
+                            }
+                        })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

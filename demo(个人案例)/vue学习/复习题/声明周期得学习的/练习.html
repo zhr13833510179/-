@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" placeholder="请输入id" v-model="id">
+            <input type="text" placeholder="请输入名称" v-model="name" @keyup.f2="push" v-color="'pink'">
+            <input type="button" value="添加" @click="push">
+            <input type="text" placeholder="用户搜索" v-model="seach" v-color="'green'" v-focus>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>名称</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item,index in search(seach)">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.time | dataFormat}}</td>
+                    <td>
+                        <a href="#" @click="del(index)">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="app2">
+        <p v-color="'yellow'" v-fontweight="500" v-fontsize="'30px'">{{time | dataFormat}}</p>
+    </div>
+    <script>
+
+        // 定义一个全局过滤器 进行实践格式化
+        //全局过滤器所有实例都可以用
+        Vue.filter('dataFormat', function (datestr, pattern = "") {
+            let time = new Date(datestr)
+            let y = time.getFullYear();
+            let m = time.getMonth();
+            let d = time.getDay();
+
+            if (pattern.toLowerCase() === 'yyyy-mm-dd') {
+                return `${y}-${m}-${d}`
+            } else {
+                let hh = time.getHours();
+                let mm = time.getMinutes();
+                let ss = time.getSeconds();
+                return `${y}-${m}-${d}-${hh}-${mm}-${ss}`
+            }
+        })
+        //自动获取焦点
+        Vue.directive('focus',{
+            // bind:function(el){
+            //     // el.focus
+            // },
+            inserted:function(el){
+                el.focus()
+            }
+        })
+                //只能定义一个 不用s
+                Vue.directive('color',{
+            bind:function(el, binding){
+                el.style.color = binding.value
+            }
+        })
+
+            
+
+        let vm2 = new Vue({
+            el: '#app2',
+            data: {
+                time: new Date()
+            },
+            methods: {},
+            filters: { //定义一个私有过滤器
+                dataFormat: function (datestr, pattern = "") {
+                    let time = new Date(datestr)
+                    let y = time.getFullYear();
+                    let m = time.getMonth();
+                    let d = time.getDay();
+
+                    if (pattern.toLowerCase() === 'yyyy-mm-dd') {
+                        return `${y}-${m}-${d}`
+                    } else {
+                        let hh = time.getHours().toString().padStart(2, '0')
+                        let mm = time.getMinutes().toString().padStart(2, '0')
+                        let ss = time.getSeconds().toString().padStart(2, '0')
+                        return `${y}-${m}-${d}-${hh}-${mm}-${ss}~~~`
+                    }
+                }
+            },
+            //可以定义多个要用s
+            directives: {
+            'fontsize' : function(el, binding){
+                el.style.fontSize = binding.value
+            },
+            'fontweight' : function(el, binding){
+                el.style.fontWeight = binding.value
+            },
+        }
+        })
+
+
+
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                id: '',
+                name: '',
+                seach: '',
+                list: [
+                    { id: '1', name: '宝马', time: new Date() }
+                ]
+            },
+            methods: {
+                push() {
+                    this.list.push({ id: this.id, name: this.name, time: new Date() })
+                },
+                del(i) {
+                    this.list.splice(i, 1)
+                },
+                search(seach) {
+                    return this.list.filter(item => {
+                        if (item.name.includes(seach)) {
+                            return item
+                        }
+                    })
+                }
+            },
+
+
+                    // 自定义设置 一个私有指令
+        
+        })
+
+
+
+        //自定义设置 键盘修饰符
+        Vue.config.keyCodes.f2 = 113
+
+
+    </script>
+</body>
+
+</html>

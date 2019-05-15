@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+<body>
+    <!-- 具体固定的一个区域 -->
+    <div id="app">
+            <!-- 通过form 进行分组 -->
+            <form action="">
+                <input type="text" placeholder="输入姓名" v-model="name">  <!--用v-model 和下面data进行连接-->>
+                <input type="text" placeholder="输入性别" v-model="sex">
+                <input type="text" placeholder="输入年龄" v-model="age">
+                <input type="text" placeholder="输入成绩" v-model="achievement">
+                <input type="button" value="提交" @click="btn">  <!--给按钮加一个点击事件 让用户在点击这个按钮的时候-->
+                                                                <!-- 把用户输入的值传达到一个固定的区域里 -->
+            </form>
+
+            <table class="table">
+                <thead>
+                    <!-- 这块的内容是：给用户观看时的视觉效果 -->
+                    <tr>
+                        <th>姓名</th>  
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th>成绩</th>
+                        <th>修改</th>
+                        <th>删除</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 遍历下面的数组 和list数组构建一个连接 把里面的内容通过插值表达式的方法 来把用户输入的内容
+                    转换到 td里面 也就是th文本下面的位置 -->
+                    <tr v-for="item,index in sch" :key="item.name">
+                        <td>{{item.name}}</td>
+                        <td>{{item.sex}}</td>
+                        <td>{{item.age}}</td>
+                        <td>{{item.achievement}}</td>
+                        <td>
+                            <button @click="xg(index)">修改</button>  <!--修改  通过点击事件来连接下面的代码-->
+                        </td>
+                        <td>
+                            <button @click="sc(index)">删除</button> <!--添加 通过点击事件来连接下面的代码-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                // 在数组中 创建一个对象 在对象里面 输入你要和上面 input v-model 中的 创建一个连接
+                list:[
+                    {name:"张三", sex:"14", age:"男", achievement:"100"}   
+                ]
+            },
+            methods: {  //函数代码
+                btn(){  //btn 是用户点击添加时 所用的代码
+                    this.list.push({name: this.name, sex: this.sex, age: this.age, achievement: this.achievement})
+                },
+                xg(i){  //这个是修改时的代码
+                    var achievement = prompt('请输入要修改得成绩')  //把用户输入在弹窗文本下的文字通过一个新的变量名
+                    this.list[i].achievement =  achievement; // 通过上面的新创建的名字 来和每个数组中包含的成绩之间产生替换
+                                                             // 做到把用户输入的内容更新的成绩当中去
+                },
+                sc(i){ //这个是删除的代码
+                    if(confirm('是否删除数据？')){  //判断 用户是否要删除此行代码 如是true 则执行下面的
+                                                    //代码     如不是 则反 之
+                        this.list.splice(i,1)  //这串代码是把点击删除的那一串代码在list数组中 通过cplice起到删除的效果
+                                                //括号里面的内容    i 是指全部元素  1 是指删除几行
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+</html>

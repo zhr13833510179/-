@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ msg | msgFormat('疯狂+10086','123321') | txt }}</p>
+    </div>
+
+    <script>
+        //定义一个 Vue 的全局过滤器, 名字叫做msgFormat
+        //字符串 replace方法 ,第一个参数 可以是字符串  也可以是 正则
+        //可以传多个参数 来改变元素的值
+        Vue.filter('msgFormat', function (msg,text,text2) {
+                // g 是正则里全部的意思
+            return msg.replace(/善良/g, text+ text2)
+        }),
+        Vue.filter('txt', function(msg){
+            return msg + '啦啦啦·'
+        })
+
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                msg: "我曾经也是一个善良的少年,善良的闪亮亮,可善良是会有好报的,"
+            },
+            methods: ""
+        })
+    </script>
+</body>
+
+</html>

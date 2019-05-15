@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" placeholder="输入序号" v-model='id'>
+            <input type="text" placeholder="输入车名" v-model='name'>
+
+
+            <input type="button" value="添加" @click="push">
+
+            <input type="text" placeholder="请输入要查询的内容" v-model="seach">
+
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>车名</th>
+                    <th>车名</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="value in search(seach)">
+                    <td>{{value.id}}</td>
+                    <td>{{value.name}}</td>
+                    <td>{{value.time}}</td>
+                    <td>
+                        <a href="" @click.prevent="del(index)">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                list: [
+                    { id: "1", name: "宝马", time: new Date, },
+                    { id: "2", name: "奔驰", time: new Date, }
+                ],
+                seach:"", //要搜索的关键字
+            },
+            methods: {
+                push() {
+                    this.list.push({ id: this.id, name: this.name, time: new Date,})
+                },
+                del(i){
+                    if(confirm("您确定要删除吗?")){
+                        this.list.splice(i,1)
+                    }
+                },
+                search(seach){   //从seach 也就是用户输入中查找
+                            // 通过filter 遍历数组  value 用来接收下面代码返回值的作用
+                        return this.list.filter(value=>{   //把外面的value 拿到里面来  在这里进行操作
+                                // Es6中为字符串提供了一个方法  叫做string. prototype.includes
+                                //('要包含的字符串')
+                                // 如果包含则是ture,不包含则是false
+                                if(value.name.includes(seach)){  //如果上面证的name里 包含了用户输入的关键字
+                                    return value  //则让他返回到value 里 进行更新数据
+                                }
+                        })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
